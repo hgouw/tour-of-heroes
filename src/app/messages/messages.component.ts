@@ -8,7 +8,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./messages.component.css']
 })
 export class MessagesComponent implements OnInit {
-  constructor(public messageService: MessageService) {}
+  constructor(public messageService: MessageService) {} // used Angular Dependency Injection to inject it into a component
 
   ngOnInit() {
   }
