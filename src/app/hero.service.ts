@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero';
-import { HEROES } from './mock-heroes';
+// import { HEROES } from './mock-heroes';
 import { MessageService } from './message.service';
 
 const httpOptions = {
@@ -28,7 +28,7 @@ export class HeroService {
   // 3. an observable
   getHeroes(): Observable<Hero[]> { // implemented as an observable
     // TODO: send the message _after_ fetching the heroes
-    this.messageService.add('HeroService: fetched heroes');
+    // this.messageService.add('HeroService: fetched heroes');
     // return of(HEROES);
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
@@ -41,7 +41,7 @@ export class HeroService {
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
     // TODO: send the message _after_ fetching the hero
-    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    // this.messageService.add(`HeroService: fetched hero id=${id}`);
     // return of(HEROES.find(hero => hero.id === id));
     return this.http.get<Hero>(url)
       .pipe(
