@@ -13,6 +13,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule } from './/app-routing.module';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { AppRoutingModule } from './/app-routing.module';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroSearchComponent
   ],
   providers: [
     // no need to place any providers due to the `providedIn` flag...
